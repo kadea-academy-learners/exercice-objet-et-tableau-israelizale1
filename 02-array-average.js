@@ -3,9 +3,28 @@
 // - Calcule la moyenne des notes
 // - retourne un message "Réussi" si la moyenne est >= 10, sinon "Échoué"
 
+  // Crée un tableau `notes` contenant 5 nombres
+let notes = [12, 8, 15, 7, 10];
+
+// Écrire une fonction averageNote avec `notes` comme paramètre
 function averageNote(notes) {
-	
+  let sum = 0;
+
+  for (let i = 0; i < notes.length; i++) {
+    sum += notes[i];
+  }
+
+  let average = sum / notes.length;
+
+  if (average >= 10) {
+    return "Réussi";
+  } else {
+    return "Échoué";
+  }
 }
+
+// L'appel de la fonction
+console.log(averageNote(notes)); // Affiche "Réussi"
 
 module.exports = {
 	averageNote,
