@@ -13,13 +13,16 @@ La fonction doit retourner un objet contenant ces trois propriétés :
 */
 
 function createUser(name, age, isConnected) {
-    return {
-        nom: name,
-        age: age,
-        estConnecte: isConnected,
-    };
-    
+  return {
+    nom: name,
+    age: age,
+    estConnecté: isConnected,
+  };
 }
+
+// Exemple d'utilisateur
+const user1 = createUser("Alice", 25, true);
+console.log(user1);
 
 module.exports = {
     createUser,
